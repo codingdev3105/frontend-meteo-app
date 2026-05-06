@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://backend-meteo-app.vercel.app/api';
 
 // Instance avec Intercepteur pour le Token
 const instance = axios.create({
