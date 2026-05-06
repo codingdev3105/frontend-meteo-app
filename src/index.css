@@ -1,0 +1,303 @@
+:root {
+  /* World-Class Professional Palette (Stripe/Vercel inspired) */
+  --color-brand-primary: #0f172a;   /* Slate 900 - Deep, professional dark */
+  --color-brand-secondary: #0070f3; /* Vercel/Next Blue - Sharp, reliable */
+  --color-accent: #000000;          /* Pitch Black for high contrast elements */
+  
+  --color-background-cloud: #fafafa; /* Ultra-light clean gray */
+  --color-surface-card: #ffffff;     /* Pure white */
+  --color-surface-hover: #f1f5f9;    /* Light interactive gray */
+  
+  --color-text-main: #111827;       /* Gray 900 */
+  --color-text-muted: #6b7280;      /* Gray 500 */
+  
+  /* Status Colors */
+  --color-success: #10b981;         /* Emerald */
+  --bg-success: rgba(16, 185, 129, 0.1);
+  --color-warning: #f59e0b;         /* Amber */
+  --bg-warning: rgba(245, 158, 11, 0.1);
+  --color-danger: #ef4444;          /* Red */
+  --bg-danger: rgba(239, 68, 68, 0.1);
+  --color-info: #3b82f6;            /* Blue */
+  --bg-info: rgba(59, 130, 246, 0.1);
+  
+  /* Borders and Dividers - Ultra subtle */
+  --color-border: #eaeaea;          /* Vercel standard border */
+
+  /* Typography */
+  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", document;
+  
+  /* Perfectly weighted, realistic shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.05), 0 4px 6px -4px rgba(0,0,0,0.025);
+  
+  /* Sharp, modern radii */
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-pill: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.3s ease;
+}
+
+html {
+  font-size: 14px; /* Base réduite au lieu de 16px pour un look dashboard plus dense */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-sans);
+}
+
+body {
+  background-color: var(--color-background-cloud);
+  color: var(--color-text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-brand-primary);
+  font-weight: 600;
+  letter-spacing: -0.02em; /* Tighter letter spacing for professional look */
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-brand-secondary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  font-weight: 500;
+}
+
+a:hover {
+  color: #0051a8; /* Darker blue */
+}
+
+.container {
+  max-width: 1040px; /* Tighter width for modern focus */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* World-class Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 0.875rem; /* 14px */
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+  user-select: none;
+}
+
+.btn-primary {
+  background-color: var(--color-accent); /* Deep black */
+  color: white !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.12); /* Subtle lift */
+}
+
+.btn-primary:hover {
+  background-color: #333333; /* Slightly lighter black on hover */
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  background-color: #000000;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+}
+
+.btn-secondary {
+  background-color: var(--color-surface-card);
+  color: var(--color-text-main) !important;
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-surface-hover);
+  border-color: #d1d5db;
+}
+
+/* Ultra-clean Forms */
+input, textarea, select {
+  background-color: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  font-size: 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.input-premium {
+  width: 100%;
+  height: 3.2rem !important;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0,0,0,0.15); /* Bordure plus visible */
+  outline: none;
+  transition: all var(--transition-fast);
+  font-size: 1rem;
+  background-color: var(--color-surface-card);
+  border-radius: var(--radius-md);
+}
+
+.input-premium:focus {
+  border-color: var(--color-brand-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.15);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--color-brand-secondary);
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.15);
+}
+
+/* Professional Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--color-surface-card);
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  border-top: 1px solid var(--color-border);
+}
+
+td {
+  padding: 1rem;
+  font-size: 0.875rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-main);
+  vertical-align: middle;
+}
+
+tbody tr {
+  transition: background-color var(--transition-fast);
+}
+
+tbody tr:hover {
+  background-color: var(--color-background-cloud); /* Subtle highlight */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* World-class specialized overrides (e.g. for Cards) */
+.card-premium {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-fast);
+}
+
+.card-premium:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN (MOBILE & TABLET)
+   ========================================================================== */
+
+/* Utility Classes for Responsive */
+.scroll-x {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 13px;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Stacked KPI Cards */
+  .kpi-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  /* Modal responsiveness */
+  .modal-content {
+    width: 95% !important;
+    padding: 1.5rem !important;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Sidebar transition to overlay or small bottom bar if needed */
+  /* Handled in Layout components */
+
+  /* Hide less critical columns in tables if needed */
+  .hide-on-mobile {
+    display: none !important;
+  }
+
+  /* Header adjustments */
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 1rem;
+  }
+
+  /* Responsive font sizes */
+  h1 { font-size: 1.75rem !important; }
+  h2 { font-size: 1.5rem !important; }
+}
+
+/* Helper to make any flex container stack on mobile */
+.responsive-flex {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .responsive-flex {
+    flex-direction: column !important;
+  }
+}
